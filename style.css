@@ -1537,3 +1537,375 @@ html {
     height: 240px;
   }
 }
+
+/* =========================
+   PRELOADER SCREEN
+========================= */
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #D32F2F, #FFD700);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  overflow: hidden;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+.loader-content {
+  text-align: center;
+  color: #fff;
+  font-family: 'Cinzel', serif;
+  position: relative;
+}
+
+.loader-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: 8px;
+}
+
+.loader-logo .letter {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 1s forwards;
+}
+
+.loader-logo .letter:nth-child(1) { animation-delay: 0s; }
+.loader-logo .letter:nth-child(2) { animation-delay: 0.3s; }
+.loader-logo .letter:nth-child(3) { animation-delay: 0.6s; }
+
+.loader-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+  letter-spacing: 4px;
+  opacity: 0;
+  animation: fadeIn 1s 1.2s forwards;
+}
+
+/* Rotating ring */
+.loader-ring {
+  margin-top: 40px;
+  width: 70px;
+  height: 70px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid #fff;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite, glow 2s ease-in-out infinite alternate;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes glow {
+  from { box-shadow: 0 0 10px #FFD700; }
+  to { box-shadow: 0 0 25px #fff; }
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Hide preloader */
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+.notice-bar {
+  background: #c04141;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 0;
+}
+.notice-bar marquee {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================
+   ACHIEVEMENTS / TOPPERS
+========================= */
+.achievements {
+  background-color: #ffffff;
+  padding: 90px 5%;
+  text-align: center;
+}
+
+.achievements-title {
+  font-family: 'Cinzel', serif;
+  color: #D32F2F;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.achievements .underline {
+  width: 80px;
+  height: 4px;
+  background-color: #FFD700;
+  margin: 10px auto 25px;
+  border-radius: 3px;
+}
+
+.achievements-intro {
+  max-width: 750px;
+  margin: 0 auto 45px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.7;
+}
+
+.achievers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.achiever-card {
+  position: relative;
+  background: #fdfdfd;
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 22px 20px 26px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  border-top: 4px solid #FFD700;
+}
+
+.achiever-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.6),
+              0 0 15px rgba(211, 47, 47, 0.4);
+}
+
+.rank-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: linear-gradient(120deg, #D32F2F, #FFD700);
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.18);
+}
+
+.achiever-card img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px auto 10px;
+  display: block;
+  border: 4px solid #FFD700;
+}
+
+.achiever-card h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  color: #212121;
+}
+
+.ach-year {
+  font-size: 13px;
+  color: #757575;
+  margin-bottom: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ach-score {
+  font-size: 15px;
+  font-weight: 600;
+  color: #D32F2F;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Make it match your scroll reveal */
+.achievements.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+}
+.achievements.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .achievements {
+    padding: 70px 6%;
+  }
+  .achievements-title {
+    font-size: 30px;
+  }
+}
+
+
+/* =========================
+   STUDENT CORNER
+========================= */
+.student-corner {
+  padding: 90px 5%;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.student-title {
+  font-family: 'Cinzel', serif;
+  font-size: 36px;
+  color: #D32F2F;
+  margin-bottom: 10px;
+}
+
+.student-corner .underline {
+  width: 80px;
+  height: 4px;
+  background: #FFD700;
+  margin: 10px auto 40px;
+  border-radius: 3px;
+}
+
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.student-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 26px 22px 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid #D32F2F;
+}
+
+.student-card::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,215,0,0.5), transparent);
+  opacity: 0.7;
+}
+
+.student-card h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #212121;
+}
+
+#quoteText {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+#quoteAuthor {
+  display: block;
+  font-size: 13px;
+  color: #777;
+  font-style: italic;
+  margin-bottom: 14px;
+}
+
+#newQuoteBtn,
+#newQuizBtn {
+  margin-top: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(120deg, #FFD700, #D32F2F);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#newQuoteBtn:hover,
+#newQuizBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+}
+
+#quizQuestion {
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+#quizOptions button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  background: #fafafa;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+#quizOptions button:hover {
+  background: #fffbe6;
+  border-color: #FFD700;
+}
+
+#quizFeedback {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+#quizFeedback.correct {
+  color: #2e7d32;
+}
+#quizFeedback.incorrect {
+  color: #c62828;
+}
+
+@media (max-width: 600px) {
+  .student-corner {
+    padding: 70px 6%;
+  }
+  .student-title {
+    font-size: 30px;
+  }
+}

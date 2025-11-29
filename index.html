@@ -5,13 +5,36 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-        <!-- Signature font -->
         <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="logo1.jpeg">
+
+        <meta name="description" content="Dr. Ambedkar Convent School, Jammu – CBSE curriculum, modern facilities, and a legacy of academic excellence since 1995.">
+        <meta name="keywords" content="Dr Ambedkar Convent School Jammu, school in Jammu, CBSE school Jammu, ACS Jammu">
+
+        <meta property="og:title" content="Dr. Ambedkar Convent School, Jammu">
+        <meta property="og:description" content="Where discipline meets excellence. Admissions open from Nursery to Class 12.">
+        <meta property="og:image" content="https://lh3.googleusercontent.com/p/AF1QipMzyBmcY-ckTtSMNr6mTK04wb3DdE-MdDDYLLZv=s1360-w1360-h1020-rw">
+        <meta property="og:type" content="website">
+
+
 
 
 
     </head>
-    <body>
+    <body>   
+<div id="preloader">
+  <div class="loader-content">
+    <div class="loader-logo">
+      <span class="letter">A</span>
+      <span class="letter">C</span>
+      <span class="letter">S</span>
+    </div>
+    <div class="loader-subtitle">JAMMU</div>
+    <div class="loader-ring"></div>
+  </div>
+</div>
+
         <header>
   <div class="navbar">
     <div class="logo"></div>
@@ -44,6 +67,11 @@
     </ul>
   </div>
 </header>
+<div class="notice-bar">
+  <marquee behavior="scroll" direction="left">
+    Admissions open for Session 2025–26 • PTM on 10th December • Winter vacations from 24th Dec
+  </marquee>
+</div>
 
 
         <section class="hero-slider" id="home">
@@ -125,6 +153,79 @@
     <span class="close">&times;</span>
     <img id="lightbox-img" src="" alt="Expanded view">
   </div>
+  <section class="achievements reveal" id="achievements">
+  <h2 class="achievements-title">Our Achievers</h2>
+  <div class="underline"></div>
+
+  <p class="achievements-intro">
+    For over two decades, our students have consistently excelled in board exams,
+    competitive tests, and co-curricular activities – making Dr. Ambedkar Convent
+    School a trusted name in Jammu.
+  </p>
+
+  <div class="achievers-grid">
+    <div class="achiever-card">
+      <div class="rank-tag">Board Topper</div>
+      <img src="topper1.jpg" alt="Class 10 Topper">
+      <h3>Riya Sharma</h3>
+      <p class="ach-year">Class 10 · 2024</p>
+      <p class="ach-score">98.6% (CBSE)</p>
+    </div>
+
+    <div class="achiever-card">
+      <div class="rank-tag">Medical Stream</div>
+      <img src="topper2.jpg" alt="Class 12 Medical Topper">
+      <h3>Arjun Singh</h3>
+      <p class="ach-year">Class 12 · 2024</p>
+      <p class="ach-score">97.8% · NEET Qualified</p>
+    </div>
+
+    <div class="achiever-card">
+      <div class="rank-tag">Non-Medical</div>
+      <img src="topper3.jpg" alt="Class 12 Non-medical Topper">
+      <h3>Sakshi Gupta</h3>
+      <p class="ach-year">Class 12 · 2024</p>
+      <p class="ach-score">96.9% · JEE Aspirant</p>
+    </div>
+
+    <div class="achiever-card">
+      <div class="rank-tag">Commerce</div>
+      <img src="topper4.jpg" alt="Commerce Topper">
+      <h3>Rahul Verma</h3>
+      <p class="ach-year">Class 12 · 2023</p>
+      <p class="ach-score">96.3% · CA Foundation Aspirant</p>
+    </div>
+  </div>
+</section>
+<section class="student-corner" id="student-corner">
+  <h2 class="student-title">Student Corner</h2>
+  <div class="underline"></div>
+
+  <div class="student-grid">
+
+    <!-- Quote of the Day -->
+    <div class="student-card">
+      <h3>Quote of the Day</h3>
+      <p id="quoteText">Loading...</p>
+      <span id="quoteAuthor"></span>
+      <button id="newQuoteBtn" type="button">New Quote</button>
+    </div>
+
+    <!-- Quick Quiz -->
+    <div class="student-card">
+      <h3>Quick Quiz</h3>
+      <p id="quizQuestion">Loading question...</p>
+
+      <div id="quizOptions"></div>
+
+      <p id="quizFeedback"></p>
+      <button id="newQuizBtn" type="button">New Question</button>
+    </div>
+
+  </div>
+</section>
+
+
 
 
 <section class="about" id="about">
@@ -143,6 +244,9 @@
     </div>
   </div>
 </section>
+<!-- Live Weather Widget – ACS Jammu -->
+
+
 
 <section class="facilities reveal">
   <h2 class="facilities-title">Our Facilities</h2>
@@ -180,11 +284,11 @@
 
   <div class="branch-toggle">
     <button class="branch-btn active" data-branch="bantalab">Main Branch – Bantalab</button>
-    <button class="branch-btn" data-branch="trikuta">City Branch – Trikuta Nagar</button>
+    <button class="branch-btn" data-branch="trikuta">City Branch – Bakshi Nagar</button>
   </div>
 
   <div class="branch-display">
-    <!-- Main branch -->
+
     <div class="branch-content active" id="bantalab">
       <div class="branch-info">
         <h3>Bantalab Campus</h3>
@@ -200,10 +304,10 @@
       </div>
     </div>
 
-    <!-- City branch -->
+
     <div class="branch-content" id="trikuta">
       <div class="branch-info">
-        <h3>Trikuta Nagar Campus</h3>
+        <h3>Rajpura Mangotrian Campus</h3>
         <p>The vibrant junior-wing campus designed for activity-based learning and holistic growth.</p>
         <a href="https://www.google.com/maps/dir/?api=1&destination=Dr.+Ambedkar+Convent+School,+Trikuta+Nagar,+Jammu"
            target="_blank" class="map-btn">
@@ -390,6 +494,8 @@
     </div>
   </div>
 </section>
+
+
 
 
 <footer class="footer">
@@ -745,4 +851,130 @@ document.addEventListener("DOMContentLoaded", () => {
   revealOnScroll();
 });
 </script>
+
+<script>
+// Wait for page to load fully
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  setTimeout(() => {
+    preloader.classList.add("fade-out");
+  }, 2000); // 2-second smooth delay before fade-out
+});
+
+
+</script>
+<script>
+// Student Corner – Quotes + Quiz
+document.addEventListener("DOMContentLoaded", function() {
+  // Quotes data
+  const quotesData = [
+    { text: "Education is the most powerful weapon you can use to change the world.", author: "Nelson Mandela" },
+    { text: "The future depends on what you do today.", author: "Mahatma Gandhi" },
+    { text: "Success is the sum of small efforts repeated day in and day out.", author: "Robert Collier" },
+    { text: "Discipline is the bridge between goals and accomplishment.", author: "Jim Rohn" },
+    { text: "Believe you can and you’re halfway there.", author: "Theodore Roosevelt" }
+  ];
+
+  const quoteText = document.getElementById("quoteText");
+  const quoteAuthor = document.getElementById("quoteAuthor");
+  const newQuoteBtn = document.getElementById("newQuoteBtn");
+
+  function loadRandomQuote() {
+    const q = quotesData[Math.floor(Math.random() * quotesData.length)];
+    quoteText.textContent = "“" + q.text + "”";
+    quoteAuthor.textContent = "– " + q.author;
+  }
+
+  if (quoteText && quoteAuthor) {
+    loadRandomQuote();
+    if (newQuoteBtn) {
+      newQuoteBtn.addEventListener("click", loadRandomQuote);
+    }
+  }
+
+  // Quiz data
+  const quizData = [
+    {
+      question: "Who is the Father of the Indian Constitution?",
+      options: ["Mahatma Gandhi", "Dr. B.R. Ambedkar", "Jawaharlal Nehru", "Subhas Chandra Bose"],
+      answer: 1
+    },
+    {
+      question: "Which is the smallest prime number?",
+      options: ["0", "1", "2", "3"],
+      answer: 2
+    },
+    {
+      question: "Which planet is known as the Red Planet?",
+      options: ["Earth", "Mars", "Jupiter", "Venus"],
+      answer: 1
+    },
+    {
+      question: "Which gas do plants release during photosynthesis?",
+      options: ["Carbon dioxide", "Nitrogen", "Oxygen", "Hydrogen"],
+      answer: 2
+    },
+    {
+      question: "What is the capital of Jammu & Kashmir (in summer)?",
+      options: ["Srinagar", "Jammu", "Leh", "Udhampur"],
+      answer: 0
+    }
+  ];
+
+  const quizQuestion = document.getElementById("quizQuestion");
+  const quizOptions = document.getElementById("quizOptions");
+  const quizFeedback = document.getElementById("quizFeedback");
+  const newQuizBtn = document.getElementById("newQuizBtn");
+
+  let currentQuizIndex = -1;
+
+  function loadQuiz() {
+    if (!quizQuestion || !quizOptions) return;
+
+    quizFeedback.textContent = "";
+    quizFeedback.className = "";
+
+    const idx = Math.floor(Math.random() * quizData.length);
+    currentQuizIndex = idx;
+    const q = quizData[idx];
+
+    quizQuestion.textContent = q.question;
+
+    quizOptions.innerHTML = "";
+    q.options.forEach(function(opt, i) {
+      const btn = document.createElement("button");
+      btn.textContent = opt;
+      btn.addEventListener("click", function() {
+        checkAnswer(i);
+      });
+      quizOptions.appendChild(btn);
+    });
+  }
+
+  function checkAnswer(selectedIndex) {
+    if (currentQuizIndex === -1 || !quizFeedback) return;
+    const correctIndex = quizData[currentQuizIndex].answer;
+
+    if (selectedIndex === correctIndex) {
+      quizFeedback.textContent = "Correct! Well done 👏";
+      quizFeedback.className = "correct";
+    } else {
+      quizFeedback.textContent = "Not quite. Try the next one!";
+      quizFeedback.className = "incorrect";
+    }
+  }
+
+  if (quizQuestion && quizOptions) {
+    loadQuiz();
+    if (newQuizBtn) {
+      newQuizBtn.addEventListener("click", loadQuiz);
+    }
+  }
+});
+</script>
+
+
+
+
+
 
