@@ -34,7 +34,7 @@ html {
 
 
 .name {
-    color: #212121;
+    color: #eaeaea;
     margin-left: 30px;
 
 }
@@ -101,7 +101,7 @@ html {
 
 
 .sub-navbar {
-  background-color: #B71C1C;
+  background-color: #a41414;
   height: 90px;
   display: flex;
   align-items: center;
@@ -180,7 +180,7 @@ html {
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(211, 47, 47, 0.35); /* subtle school red tint */
+  /*background: rgba(211, 47, 47, 0.35); /* subtle school red tint */
   z-index: 1;
 }
 
