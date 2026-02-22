@@ -1909,3 +1909,198 @@ html {
     font-size: 30px;
   }
 }
+
+
+/* SEO SECTION */
+/* =========================
+   SEO SECTION
+========================= */
+
+.seo-section {
+  padding: 100px 5%;
+  background: linear-gradient(120deg, #ffffff, #f9f9f9);
+  text-align: center;
+}
+
+.seo-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.seo-title {
+  font-family: 'Cinzel', serif;
+  font-size: 38px;
+  color: #D32F2F;
+  margin-bottom: 10px;
+}
+
+.seo-section .underline {
+  width: 80px;
+  height: 4px;
+  background-color: #FFD700;
+  margin: 10px auto 40px;
+  border-radius: 3px;
+}
+
+.seo-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.seo-highlight {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #D32F2F;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.seo-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  color: #D32F2F;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.seo-points {
+  text-align: left;
+  max-width: 800px;
+  margin: 30px auto;
+  font-family: 'Poppins', sans-serif;
+  color: #444;
+  line-height: 1.8;
+}
+.seo-points li {
+  margin-bottom: 10px;
+}
+/* =========================
+   SEO CTA BUTTON
+========================= */
+
+.seo-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 32px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #FFD700, #D32F2F);
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.seo-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px #FFD700,
+              0 0 15px rgba(211,47,47,0.5);
+}
+
+/* FAQ SECTION */
+/* =========================
+   FAQ SECTION – ANIMATED
+========================= */
+/* =========================
+   FAQ SECTION – PREMIUM RESPONSIVE
+========================= */
+
+/* =========================
+   FAQ SECTION – BALANCED SPACING
+========================= */
+
+.faq-section {
+  padding: 70px 5%;     /* reduced vertical padding */
+  margin-top: 50px;     /* smaller gap from above */
+  margin-bottom: 40px;  /* balanced bottom spacing */
+  background: linear-gradient(120deg, #f9f9f9, #ffffff);
+}
+.faq-item {
+  max-width: 900px;
+  margin: 20px auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255,215,0,0.4),
+              0 0 12px rgba(211,47,47,0.3);
+}
+
+.faq-question {
+  width: 100%;
+  background: linear-gradient(90deg, #D32F2F, #B71C1C);
+  color: #fff;
+  border: none;
+  padding: 20px 25px;
+  text-align: left;
+  font-size: 17px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-icon {
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: #fff;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.faq-answer p {
+  padding: 0 25px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #444;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Active state */
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding-top: 15px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 768px) {
+
+  .faq-section {
+    padding: 50px 6%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .faq-question {
+    font-size: 15px;
+    padding: 16px 18px;
+  }
+
+  .faq-answer p {
+    font-size: 14px;
+    padding: 0 18px 18px;
+  }
+
+}
