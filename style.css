@@ -1301,103 +1301,10 @@ html {
 /* =========================
    DIRECTOR'S MESSAGE (WOW)
 ========================= */
-.director {
-  position: relative;
-  padding: 110px 5%;
-  overflow: hidden;
-  color: #fff;
-}
-
-/* parallax background (solid elegance) */
-.director-bg {
-  position: absolute; inset: 0;
-  background:
-    linear-gradient(120deg, rgba(19,19,19,.85), rgba(19,19,19,.85)),
-    url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop')
-      center/cover no-repeat;
-  background-attachment: fixed;
-  z-index: 0;
-}
-
-/* particles behind content */
-#directorParticles {
-  position: absolute; inset: 0;
-  z-index: 1; pointer-events: none;
-}
-
-.director-wrap {
-  position: relative; z-index: 2;
-  max-width: 1200px; margin: 0 auto;
-  display: grid; grid-template-columns: 340px 1fr;
-  gap: 50px; align-items: center;
-}
-
-/* portrait */
-.director-pfp {
-  display: grid; place-items: center;
-  filter: drop-shadow(0 10px 30px rgba(255,215,0,.25));
-  transform: translateY(40px); opacity: 0;
-  transition: all .9s ease;
-}
-.director-pfp img{
-  width: 320px; height: 320px; object-fit: cover;
-  border-radius: 50%;
-  border: 6px solid rgba(255,255,255,.15);
-  box-shadow: 0 0 0 6px rgba(255,215,0,.25), 0 0 35px rgba(211,47,47,.25);
-}
-
-/* message card (glass) */
-.director-card{
-  background: rgba(255,255,255,.08);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,.18);
-  border-radius: 20px;
-  padding: 40px 36px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.25);
-  transform: translateY(40px); opacity: 0;
-  transition: all .9s ease .15s;
-}
-.director-card h2{
-  font-family: 'Cinzel', serif;
-  font-size: 40px; color: #FFD700; margin-bottom: 10px;
-}
-.director-card .underline{
-  width: 80px; height: 4px; background: #FFD700;
-  border-radius: 3px; margin-bottom: 22px;
-}
-.director-card p{
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px; line-height: 1.85; color: #f1f1f1;
-}
-.director-meta{ margin-top: 22px; }
-.director-name{ color:#FFD700; font-weight:600; margin-bottom: 6px; }
-
-/* signature writes itself */
-.signature{ width: 100%; max-width: 640px; height: 120px; display:block; }
-.signature text{ animation: drawSig 3s ease forwards; }
-@keyframes drawSig { to { stroke-dashoffset: 0; } }
-
-/* reveal when in view */
-.reveal.visible, .reveal.visible img { transform: translateY(0); opacity: 1; }
-
-/* responsive */
-@media (max-width: 1024px){
-  .director-wrap{ grid-template-columns: 1fr; text-align: center; }
-  .director-card{ padding: 34px 26px; }
-  .director-pfp img{ width: 260px; height: 260px; }
-}
-
-/* optional: anchor offset for fixed headers */
-#director{ scroll-margin-top: 120px; }
-
-
 /* =========================
-   DIRECTOR SECTION (THEME-MATCHED)
+   DIRECTOR SECTION
 ========================= */
 
-/* =========================
-   DIRECTOR SECTION (INTERACTIVE)
-========================= */
 .director-section {
   position: relative;
   background: linear-gradient(120deg, #D32F2F, #FFD700);
@@ -1440,6 +1347,10 @@ html {
   transition: transform 0.3s ease;
 }
 
+/* =========================
+   DIRECTOR PHOTO
+========================= */
+
 .director-photo img {
   width: 300px;
   height: 300px;
@@ -1448,32 +1359,33 @@ html {
   border: 6px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 0 25px rgba(255, 215, 0, 0.5),
               0 0 60px rgba(211, 47, 47, 0.3);
-  transition: all 0.8s ease;
-  transform: translateZ(50px);
+  transition: all 0.6s ease;
 }
 
 .director-photo img:hover {
-  box-shadow: 0 0 35px #FFD700, 0 0 25px #D32F2F;
-  transform: scale(1.05) translateZ(80px);
+  transform: scale(1.05);
 }
+
+/* =========================
+   MESSAGE
+========================= */
 
 .director-message {
   max-width: 600px;
   text-align: left;
-  transform: translateZ(40px);
 }
 
 .director-message h2 {
   font-family: 'Cinzel', serif;
-  font-size: 42px;
-  color: #FFD700;
+  font-size: 40px;
+  color: #ffffff;
   margin-bottom: 15px;
 }
 
 .director-message .underline {
   width: 80px;
   height: 4px;
-  background-color: #fff;
+  background-color: #ffffff;
   margin-bottom: 25px;
   border-radius: 3px;
 }
@@ -1486,56 +1398,53 @@ html {
   margin-bottom: 30px;
 }
 
+/* =========================
+   SIGNATURE AREA
+========================= */
+
 .signature-area {
-  margin-top: 30px;
-  text-align: left;
+  margin-top: 20px;
 }
 
-.signature {
-  width: 100%;
-  max-width: 600px;
-  height: 120px;
-  display: block;
-}
-
-.signature text {
-  animation: drawSignature 3s ease forwards, glow 2s 3s infinite alternate;
-  filter: drop-shadow(0 0 10px #FFD700);
-}
-
-@keyframes drawSignature {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes glow {
-  from { stroke: #FFD700; opacity: 0.9; }
-  to { stroke: #fff8b0; opacity: 1; filter: drop-shadow(0 0 20px #FFD700); }
-}
+/* simple professional name */
 
 .director-name {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
-  margin-top: -10px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
   font-family: 'Poppins', sans-serif;
 }
 
+.director-title {
+  color: #e5e5e5;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 3px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media (max-width: 900px) {
+
   .director-container {
     flex-direction: column;
     text-align: center;
     padding: 40px;
   }
+
   .director-message,
   .signature-area {
     text-align: center;
   }
+
   .director-photo img {
     width: 240px;
     height: 240px;
   }
+
 }
 
 /* =========================
@@ -2103,4 +2012,148 @@ html {
     padding: 0 18px 18px;
   }
 
+}
+
+/* =========================
+   STUDENT VOICES SECTION
+========================= */
+
+.student-voices {
+  padding: 100px 5%;
+  background: #ffffff;
+}
+
+.voices-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+/* TEXT SIDE */
+
+.voices-text h2 {
+  font-family: 'Cinzel', serif;
+  color: #D32F2F;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.student-voices .underline {
+  width: 80px;
+  height: 4px;
+  background: #FFD700;
+  margin-bottom: 25px;
+  border-radius: 3px;
+}
+
+.voices-text p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.voices-points {
+  list-style: none;
+  padding: 0;
+}
+
+.voices-points li {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* VIDEO SIDE */
+
+.voices-video video {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border: 4px solid #FFD700;
+}
+
+/* HOVER EFFECT */
+
+.voices-video video:hover {
+  box-shadow: 0 0 30px #FFD700,
+              0 0 15px rgba(211,47,47,0.4);
+  transform: scale(1.02);
+  transition: 0.3s ease;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .voices-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .voices-text {
+    order: 2;
+  }
+
+  .voices-video {
+    order: 1;
+  }
+
+  .voices-text h2 {
+    font-size: 28px;
+  }
+
+}
+
+/* VIDEO WRAPPER */
+
+.video-wrapper{
+  position: relative;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* THUMBNAIL */
+
+.video-thumb{
+  width: 100%;
+  display: block;
+}
+
+/* VIDEO */
+
+.video-wrapper video{
+  width: 100%;
+  display: none;
+}
+
+/* PLAY BUTTON */
+
+.play-button{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #FFD700;
+  border: none;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.play-button:hover{
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 0 25px #FFD700;
 }

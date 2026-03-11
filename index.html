@@ -124,7 +124,7 @@
     </div>
 
     <div class="slide">
-      <img src="WhatsApp Image 2025-11-06 at 23.32.30 (1).jpeg" alt="School Image 2">
+      <img src="pic2.jpeg" alt="School Image 2">
       <div class="overlay"></div>
       <div class="caption">
         <h1>Nurturing the Leaders of Tomorrow</h1>
@@ -173,6 +173,60 @@
     <h2 class="count" data-target="25">25+</h2>
     <p>Achievements</p>
   </div>
+</section>
+<section class="student-voices reveal" id="student-voices">
+
+  <div class="voices-container">
+
+    <div class="voices-text">
+      <h2>Voices of ACS</h2>
+      <div class="underline"></div>
+
+      <p>
+        At Dr. Ambedkar Convent School, education goes beyond textbooks.
+        Our students grow with discipline, curiosity, and confidence.
+        Hear directly from them about what ACS Jammu has taught them.
+      </p>
+
+      <ul class="voices-points">
+        <li>Confidence and leadership</li>
+        <li>Strong academic foundation</li>
+        <li>Values, discipline and responsibility</li>
+        <li>Preparation for future success</li>
+      </ul>
+
+    </div>
+
+    <div class="voices-video">
+      <div class="voices-video">
+
+  <div class="voices-video">
+
+  <div class="video-wrapper">
+
+    <img src="thumbnail.jpeg" class="video-thumb" alt="Students of ACS Jammu sharing their experiences">
+
+    <button class="play-button">
+      ▶
+    </button>
+
+    <video class="student-video" preload="none">
+      <source src="vid1.mp4" type="video/mp4">
+    </video>
+
+  </div>
+
+</div>
+
+</div>
+      <p class="video-caption">
+Students of Dr. Ambedkar Convent School share how ACS Jammu
+helps them develop knowledge, discipline and confidence.
+</p>
+    </div>
+
+  </div>
+
 </section>
 <section class="photo-collage" id="gallery">
   <h2 class="gallery-title">Campus Highlights</h2>
@@ -431,21 +485,11 @@
         lifelong learners who lead with integrity and empathy.”
       </p>
       <div class="signature-area">
-        <svg class="signature" viewBox="0 0 1200 220" preserveAspectRatio="xMidYMid meet">
-          <text x="10" y="150"
-                font-family="'Great Vibes', cursive"
-                font-size="140"
-                fill="none"
-                stroke="#FFD700"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-dasharray="1600"
-                stroke-dashoffset="1600">
-            Vijay kumar dogra
-          </text>
-        </svg>
-        <p class="director-name"> Managing Director, Dr. Ambedkar Convent School</p>
+        <div class="signature-area">
+  <p class="director-name">Vijay Kumar Dogra</p>
+  <p class="director-title">Managing Director, Dr. Ambedkar Convent School</p>
+</div>
+        
       </div>
     </div>
   </div>
@@ -495,7 +539,7 @@
         <p>Civil Service Achievers</p>
       </div>
       <div class="stat reveal">
-        <h3 class="count" data-target="27">0</h3>
+        <h3 class="count" data-target="33">0</h3>
         <p>Years of Academic Excellence</p>
       </div>
     </div>
@@ -1089,6 +1133,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+</script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  const wrapper = document.querySelector(".video-wrapper");
+  const video = document.querySelector(".student-video");
+  const thumb = document.querySelector(".video-thumb");
+  const playBtn = document.querySelector(".play-button");
+
+  wrapper.addEventListener("click", function(){
+
+    thumb.style.display = "none";
+    playBtn.style.display = "none";
+
+    video.style.display = "block";
+    video.setAttribute("controls", true);
+
+    video.play();
+
+  });
+
+});
+
 </script>
 
 
