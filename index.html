@@ -201,9 +201,11 @@
         <i class="fa fa-phone"></i>
       </div>
     </div>
-  </div> 
 
-  <div class="sub-navbar">
+    <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-menu"><span class="bars"></span></button>
+  </div>
+
+  <nav class="sub-navbar" id="primary-menu">
     <ul>
       <li><a href="#home">HOME</a></li>
       <li><a href="#about">ABOUT US</a></li>
@@ -211,7 +213,7 @@
       <li><a href="#gallery">GALLERY</a></li>
       <li><a href="#contact">CONTACT US</a></li>
     </ul>
-  </div>
+  </nav>
 </header>
 <div class="notice-bar" role="marquee" aria-label="School announcements">
   <div class="ticker">
@@ -1198,6 +1200,41 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 
+</script>
+
+<script>
+// Mobile hamburger navigation
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".nav-toggle");
+  const menu = document.querySelector(".sub-navbar");
+  if (!toggle || !menu) return;
+
+  function closeMenu() {
+    menu.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+  }
+
+  toggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    const isOpen = menu.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+
+  // Close after tapping a link
+  menu.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", closeMenu);
+  });
+
+  // Close on Escape
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeMenu();
+  });
+
+  // Close when tapping outside the menu/toggle
+  document.addEventListener("click", function (e) {
+    if (!menu.contains(e.target) && !toggle.contains(e.target)) closeMenu();
+  });
+});
 </script>
 
 </body>

@@ -8,6 +8,15 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background: #ffffff;
@@ -241,4 +250,12 @@ html {
     font-size: 26px;
   }
 
+}
+
+@media (max-width: 480px) {
+  .seo-hero h1 { font-size: 26px; }
+  .seo-hero p { font-size: 15px; }
+  .seo-content h2 { font-size: 22px; }
+  .seo-content h3 { font-size: 18px; }
+  .seo-cta h2 { font-size: 22px; }
 }
