@@ -2356,11 +2356,27 @@ iframe, video {
   .hero-slider .caption h2 {
     font-size: clamp(1.4rem, 6vw, 30px) !important;
   }
-  /* Reserve room at the right so the pinned hamburger never overlaps text */
+  /* Reserve room at the right so the pinned hamburger never overlaps text,
+     and center the logo + name as a balanced group */
   .navbar {
     position: relative !important;
-    padding-right: 60px !important;
+    justify-content: center !important;
+    gap: 12px;
+    padding-right: 64px !important;
+    padding-left: 64px;
   }
+  .name {
+    margin-left: 0 !important;
+    text-align: center;
+  }
+  .n1 {
+    font-size: 20px !important;
+    margin-top: 0 !important;
+  }
+  .n2, .n3 {
+    font-size: 12px !important;
+  }
+  .logo { height: 48px !important; width: 48px !important; }
   /* Pin the hamburger to the right edge INSIDE the viewport so it can never
      be pushed off-screen and clipped by overflow-x:hidden */
   .navbar .nav-toggle {
