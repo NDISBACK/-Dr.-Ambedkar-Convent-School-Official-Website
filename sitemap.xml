@@ -24,4 +24,61 @@
     <priority>0.9</priority>
   </url>
 
+  <url>
+    <loc>https://acsjammu.com/about.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://acsjammu.com/academics.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://acsjammu.com/admissions.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://acsjammu.com/results.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://acsjammu.com/facilities.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://acsjammu.com/gallery.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://acsjammu.com/acs-jammu-cultural-program.webp</image:loc>
+      <image:title>Cultural program at Dr. Ambedkar Convent School, Jammu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://acsjammu.com/acs-jammu-annual-function.webp</image:loc>
+      <image:title>Annual function at Dr. Ambedkar Convent School, Jammu</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://acsjammu.com/contact.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
