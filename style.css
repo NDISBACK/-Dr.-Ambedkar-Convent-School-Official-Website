@@ -2510,6 +2510,74 @@ iframe, video {
   color: #444;
 }
 
+/* On-page table of contents (reused on SEO landing pages) */
+.page-prose .toc {
+  margin: 26px 0 8px;
+  padding: 22px 26px;
+  background: #fff8e1;
+  border: 1px solid #f2e2a8;
+  border-left: 4px solid var(--gold, #FFD700);
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.05);
+}
+.page-prose .toc strong {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--red, #D32F2F);
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  letter-spacing: .3px;
+}
+.page-prose .toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  columns: 2;
+  column-gap: 34px;
+}
+.page-prose .toc li {
+  margin: 0 0 10px;
+  padding-left: 20px;
+  position: relative;
+  break-inside: avoid;
+  line-height: 1.4;
+}
+.page-prose .toc li::before {
+  content: "›";
+  position: absolute;
+  left: 2px;
+  top: -1px;
+  color: var(--gold-dark, #e6c200);
+  font-weight: 700;
+}
+.page-prose .toc a {
+  color: var(--ink, #212121);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color .2s ease, border-color .2s ease;
+}
+.page-prose .toc a:hover,
+.page-prose .toc a:focus {
+  color: var(--red, #D32F2F);
+  border-bottom-color: var(--red, #D32F2F);
+}
+@media (max-width: 600px) {
+  .page-prose .toc ul { columns: 1; }
+}
+
+/* Centered content image (reused on SEO landing pages) */
+.page-figure {
+  max-width: 900px;
+  margin: 10px auto 0;
+  padding: 0 22px;
+}
+.page-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
 /* Highlighted call-to-action band reused across pages */
 .page-cta {
   background: linear-gradient(135deg, var(--red), var(--red-dark));

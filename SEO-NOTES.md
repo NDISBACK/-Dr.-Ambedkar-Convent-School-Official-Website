@@ -24,7 +24,20 @@ This documents the on-site SEO already implemented in the code, plus the off-sit
   - Every page: unique title/description, canonical, OG + Twitter, geo meta, GA4, one H1,
     visible breadcrumb, and cross-links between pages. All 8 URLs added to `sitemap.xml`.
   - Nav + footer across the whole site now link these pages (true multi-page internal linking).
-  - Note: `best-school-in-jammu.css` is now unused/orphaned — safe to delete.
+- **`best-school-in-jammu.html` upgraded to a full local-SEO landing page (Jul 2026)**:
+  - Added a visible **FAQ accordion + `FAQPage` JSON-LD** (6 local-intent Qs; visible text mirrors
+    schema exactly) — now rich-result eligible.
+  - Upgraded the `School` JSON-LD to the **two-campus** version (Bantalab + Rajpura Mangotrian,
+    address + geo each), matching `index.html`/`contact.html` NAP.
+  - Expanded body to ~1,000+ words with new local sections: Two Campuses, **Areas We Served**,
+    **Safe Campus & School Transport**, **Affordable/Transparent Fees**, plus an on-page table of
+    contents, a campus image (`acs-jammu-school-building.webp`, keyword alt), and reused animated
+    `.stats` counters. Added a sitemap `<image:image>` entry for this URL (was the only one missing).
+  - New small CSS for `.toc` / `.page-figure` added to `style.css`; reveal + counter + FAQ scripts
+    copied from the existing pages.
+  - **TODO for the school (facts I can't invent):** confirm real (a) localities served, (b) fee note,
+    (c) transport/bus routes — search the page for `TODO: confirm` and replace/keep as appropriate.
+  - Deleted the orphaned `best-school-in-jammu.css` (the page uses `style.css`).
 
 ## ⬜ Off-site — do these (highest impact for local ranking)
 1. **Google Business Profile** — claim/verify a listing for BOTH campuses. Use the EXACT same name, address, phone as on the site. Add photos, hours, category "School". This is the single biggest lever for "school in Jammu" local results.
